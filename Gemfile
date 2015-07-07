@@ -10,6 +10,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'omniauth-google-oauth2', '0.2.6'
 gem 'rails_admin', '0.6.8'
 gem 'mandrill-api', '1.0.53'
+gem 'mini_magick', '4.2.7'
+gem 'fog', '1.32.0'
+gem 'carrierwave', '0.10.0'
 
 group :development, :test do
   gem 'byebug', '5.0.0'

@@ -18,7 +18,7 @@
     <% @wrestlers.each do |wrestler| %>
       <tr>
         <td><%= wrestler.name %></td>
-        <td><%= wrestler.image %></td>
+        <td><%= image_tag wrestler.image.thumb.url %></td>
         <td><%= wrestler.alignment %></td>
         <td><%= wrestler.position %></td>
         <td><%= wrestler.injured? %></td>

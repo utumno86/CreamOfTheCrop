@@ -3,7 +3,7 @@ class WrestlersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-     @wrestler = Wrestler.all
+     @wrestlers = Wrestler.all
   end
 
   def show
