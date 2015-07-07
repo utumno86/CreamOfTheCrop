@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wrestlers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Alignment</th>
+      <th>Position</th>
+      <th>Injured?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wrestlers.each do |wrestler| %>
+      <tr>
+        <td><%= wrestler.name %></td>
+        <td><%= wrestler.image %></td>
+        <td><%= wrestler.alignment %></td>
+        <td><%= wrestler.position %></td>
+        <td><%= wrestler.injured? %></td>
+        <td><%= link_to 'Show', wrestler %></td>
+        <td><%= link_to 'Edit', edit_wrestler_path(wrestler) %></td>
+        <td><%= link_to 'Destroy', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wrestler', new_wrestler_path %>

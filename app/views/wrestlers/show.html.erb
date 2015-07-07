@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wrestler.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @wrestler.image %>
+</p>
+
+<p>
+  <strong>Alignment:</strong>
+  <%= @wrestler.alignment %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @wrestler.position %>
+</p>
+
+<p>
+  <strong>Injured?:</strong>
+  <%= @wrestler.injured? %>
+</p>
+<h5>Promoter: <%=@wrestler.user.name  %></h5>
+
+<%= link_to 'Edit', edit_wrestler_path(@wrestler) %> |
+<%= link_to 'Back', wrestlers_path %>
