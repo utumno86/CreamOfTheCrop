@@ -1,35 +1,131 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Wrestlers</h1>
+<h1><%=current_user.promotion  %> -- Roster</h1>
+<h2><strong>Your Wrestlers in the Main Event! ========================</h2></strong>
+<h3><u>Babyfaces (Tecnicos)</u>  ================================================</h3>
+<% @main_event_babyfaces.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h3><u>Heels (Rudos)</u>  ================================================</h3>
+<% @main_event_heels.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h2><strong>Your Wrestlers in the High Card! ========================</h2></strong>
+<h3><u>Babyfaces (Tecnicos)</u>  ================================================</h3>
+<% @high_card_babyfaces.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h3><u>Heels (Rudos)</u>  ================================================</h3>
+<% @high_card_heels.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h2><strong>Your Wrestlers in the Mid Card! ========================</h2></strong>
+<h3><u>Babyfaces (Tecnicos)</u>  ================================================</h3>
+<% @mid_card_babyfaces.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h3><u>Heels (Rudos)</u>  ================================================</h3>
+<% @mid_card_heels.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h2><strong>Your Wrestlers in the Low Card! ========================</h2></strong>
+<h3><u>Babyfaces (Tecnicos)</u>  ================================================</h3>
+<% @low_card_babyfaces.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h3><u>Heels (Rudos)</u>  ================================================</h3>
+<% @low_card_heels.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h2><strong>Your Wrestlers in the Undercard! ========================</h2></strong>
+<h3><u>Babyfaces (Tecnicos)</u>  ================================================</h3>
+<% @undercard_babyfaces.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
+<h3><u>Heels (Rudos)</u>  ================================================</h3>
+<% @undercard_heels.each do |wrestler|  %>
+		<%=image_tag wrestler.image.url  %>
+		<h4><%= wrestler.name  %></h4>
+		<%if wrestler.injured?  %>
+				<p><%= wrestler.name  %> is currently injured and unable to compete</p>
+		<%end  %>
+		<p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary" %></p>
+		<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
+		<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
+		btn-small btn-danger" %></p>
+<%end  %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Alignment</th>
-      <th>Position</th>
-      <th>Injured?</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @wrestlers.each do |wrestler| %>
-      <tr>
-        <td><%= wrestler.name %></td>
-        <td><%= image_tag wrestler.image.thumb.url %></td>
-        <td><%= wrestler.alignment %></td>
-        <td><%= wrestler.position %></td>
-        <td><%= wrestler.injured? %></td>
-        <td><%= link_to 'Show', wrestler %></td>
-        <td><%= link_to 'Edit', edit_wrestler_path(wrestler) %></td>
-        <td><%= link_to 'Destroy', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Wrestler', new_wrestler_path %>

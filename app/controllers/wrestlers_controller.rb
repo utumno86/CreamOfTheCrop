@@ -3,7 +3,9 @@ class WrestlersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-     @wrestlers = Wrestler.all
+    @wrestlers = Wrestler.all
+    @main_event_babyfaces, @main_event_heels, @high_card_babyfaces, @high_card_heels, @mid_card_babyfaces,
+        @mid_card_heels, @low_card_babyfaces, @low_card_heels, @undercard_babyfaces, @undercard_heels = Wrestler.sort!(current_user.id)
   end
 
   def show
@@ -49,6 +51,6 @@ class WrestlersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wrestler_params
-      params.require(:wrestler).permit(:name, :image, :alignment, :position, :injured?, :user_id)
+      params.require(:wrestler).permit(:name, :image, :alignment, :position, :injured, :user_id)
     end
 end
