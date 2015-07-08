@@ -1,5 +1,6 @@
 class Wrestler < ActiveRecord::Base
   belongs_to :user
+  has_many :matches
   mount_uploader :image, ImageUploader
 
   def self.sort!(id)

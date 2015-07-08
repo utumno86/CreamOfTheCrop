@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708172836) do
+ActiveRecord::Schema.define(version: 20150708203202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.integer  "match_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "cards", ["match_id"], name: "index_cards_on_match_id", using: :btree
+
+  create_table "matches", force: :cascade do |t|
+    t.integer  "babyface_id"
+    t.integer  "heel_id"
+    t.integer  "card_id"
+    t.integer  "position"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "matches", ["babyface_id"], name: "index_matches_on_babyface_id", using: :btree
+  add_index "matches", ["card_id"], name: "index_matches_on_card_id", using: :btree
+  add_index "matches", ["heel_id"], name: "index_matches_on_heel_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -50,5 +71,6 @@ ActiveRecord::Schema.define(version: 20150708172836) do
 
   add_index "wrestlers", ["user_id"], name: "index_wrestlers_on_user_id", using: :btree
 
+  add_foreign_key "cards", "matches"
   add_foreign_key "wrestlers", "users"
 end
