@@ -5,6 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
 # Environment variables (ENV['...']) can be set in the file .env file.
+
+30.times do
+  w = Wrestler.new
+  w.name = Faker::Name.name
+  a = Random.rand(1..2)
+  if a == 1
+    w.alignment = true
+  else
+    w.alignment = false
+  end
+  w.position = Random.rand(1..5)
+  w.user_id = 1
+  w.remote_image_url = ("http://loremflickr.com/640/480/wrestling")
+  w.save
+end
