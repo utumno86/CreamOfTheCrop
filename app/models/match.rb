@@ -8,8 +8,8 @@ class Match < ActiveRecord::Base
       @mid_card_heels, @low_card_babyfaces, @low_card_heels, @undercard_babyfaces, @undercard_heels = Wrestler.sort!(id)
     if position == 3
       match = Match.new
-      match.heel = @mid_card_heels[Random.rand(1..@mid_card_heels.length)]
-      match.babyface = @mid_card_babyfaces[Random.rand(1..@mid_card_babyfaces.length)]
+      match.heel = @mid_card_heels[Random.rand(0..(@mid_card_heels.length-1))]
+      match.babyface = @mid_card_babyfaces[Random.rand(0..(@mid_card_babyfaces.length-1))]
       match.position = position
       match.save
     end
