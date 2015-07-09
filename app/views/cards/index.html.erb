@@ -1,2 +1,6 @@
-<h1>Your match is:</h1>
-<h2><%=@match.heel.name  %> vs. <%=@match.babyface.name  %></h2>
+<h1>Your card is:</h1>
+	<% index = 1 %>
+	<% @card.matches.each do |match|  %>
+	  <h2> <%= index %>. <%=match.heel.name  %> vs. <%=match.babyface.name  %></h2>
+		<%index += 1  %>
+	<%end %>
