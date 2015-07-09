@@ -33,5 +33,21 @@
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<p>Copyright &copy; Cream of the Crop 2015</p>
+					<p>Image attribution for the picture of <%= link_to 'Macho Man Randy Savage', ("https://c2.staticflickr.com/4/3943/15400899809_b0fc02fcbd_b.jpg") %> goes to <%=link_to 'Alan Teo', ("https://www.flickr.com/photos/alanosaur/15400899809/")  %> over at Flickr.  </p>
+					<p>Image attribution for the picture of <%= link_to 'Macho Man and Miss Elizabeth', ("http://orig10
+					.deviantart.net/38c4/f/2011/142/4/c/rest_in_peace_macho_man_by_jermainedivine-d3gzg4c.jpg") %> goes to
+						<%=link_to 'Jermaine Divine', ("http://jermainedivine.deviantart.com/art/Rest-In-Peace-Macho-Man-209926236")  %> over at Deviant
+						art.</p>
+					<p>Would you like to learn more <%= link_to 'About', page_path('about') %> Cream of the Crop and its
+						author?</p>
+				</div>
+			</div>
+		</div>
+	</footer>
   </body>
 </html>
