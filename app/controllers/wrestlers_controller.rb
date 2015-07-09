@@ -3,8 +3,16 @@ class WrestlersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @main_event_babyfaces, @main_event_heels, @high_card_babyfaces, @high_card_heels, @mid_card_babyfaces,
-        @mid_card_heels, @low_card_babyfaces, @low_card_heels, @undercard_babyfaces, @undercard_heels = Wrestler.sort!(current_user.id)
+    @main_event_babyfaces = Wrestler.set_main_event_babyfaces(current_user.id)
+    @main_event_heels = Wrestler.set_main_event_heels(current_user.id)
+    @high_card_babyfaces = Wrestler.set_high_card_babyfaces(current_user.id)
+    @high_card_heels = Wrestler.set_high_card_heels(current_user.id)
+    @mid_card_babyfaces = Wrestler.set_mid_card_babyfaces(current_user.id)
+    @mid_card_heels = Wrestler.set_mid_card_heels(current_user.id)
+    @low_card_babyfaces = Wrestler.set_low_card_babyfaces(current_user.id)
+    @low_card_heels = Wrestler.set_low_card_heels(current_user.id)
+    @undercard_babyfaces = Wrestler.set_undercard_babyfaces(current_user.id)
+    @undercard_heels  = Wrestler.set_undercard_heels(current_user.id)
   end
 
   def show

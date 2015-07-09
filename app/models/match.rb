@@ -4,8 +4,8 @@ class Match < ActiveRecord::Base
   belongs_to :card
 
   def self.set_match(position,id)
-    @main_event_babyfaces, @main_event_heels, @high_card_babyfaces, @high_card_heels, @mid_card_babyfaces,
-      @mid_card_heels, @low_card_babyfaces, @low_card_heels, @undercard_babyfaces, @undercard_heels = Wrestler.sort!(id)
+    @mid_card_babyfaces = Wrestler.set_mid_card_babyfaces(id)
+    @mid_card_heels = Wrestler.set_mid_card_heels(id)
     if position == 3
       match = Match.new
       match.heel = @mid_card_heels[Random.rand(0..(@mid_card_heels.length-1))]
