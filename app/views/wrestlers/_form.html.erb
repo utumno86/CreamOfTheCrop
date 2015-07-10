@@ -11,27 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :image %><br>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :alignment %><br>
-    <%= f.check_box :alignment %>
+  <div class="form-group">
+		<p>Alignment:</p>
+		<%= f.radio_button :alignment, true %>
+		<%= f.label"Babyface (Tecnico)" %>
+		<%= f.radio_button :alignment, false %>
+		<%= f.label "Heel (Rudo)" %>
   </div>
-  <div class="field">
-    <%= f.label :position %><br>
-    <%= f.number_field :position %>
+  <div class="form-group">
+		<p>Card Position:</p>
+		<%= f.radio_button :position, 1 %>
+		<%= f.label "Undercard" %>
+		<%= f.radio_button :position, 2 %>
+		<%= f.label "Low Card" %>
+		<%= f.radio_button :position, 3 %>
+		<%= f.label "Mid Card" %>
+		<%= f.radio_button :position, 4 %>
+		<%= f.label "High Card" %>
+		<%= f.radio_button :position, 5 %>
+		<%= f.label "Main Event" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :injured, "injured?" %><br>
-    <%= f.check_box :injured %>
+    <%= f.check_box :injured, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', :class => "btn btn-large btn-primary" %>
   </div>
 <% end %>
