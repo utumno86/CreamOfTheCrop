@@ -7,60 +7,70 @@ class Match < ActiveRecord::Base
     index = 0
     matches = []
     if position == 5
-      @main_event_babyfaces = Wrestler.set_main_event_babyfaces(id)
-      @main_event_heels = Wrestler.set_main_event_heels(id)
+      @main_event_babyfaces = Wrestler.set_main_event_babyfaces(id).to_a
+      @main_event_heels = Wrestler.set_main_event_heels(id).to_a
       while (index < num_matches)
         match = Match.new
-        match.heel = @main_event_heels[Random.rand(0..(@main_event_heels.length-1))]
-        match.babyface = @main_event_babyfaces[Random.rand(0..(@main_event_babyfaces.length-1))]
+        @main_event_heels.shuffle!
+        match.heel = @main_event_heels.pop
+        @main_event_babyfaces.shuffle!
+        match.babyface = @main_event_babyfaces.pop
         match.position = position
         match.save
         matches << match
         index += 1
       end
     elsif position == 4
-      @high_card_babyfaces = Wrestler.set_high_card_babyfaces(id)
-      @high_card_heels = Wrestler.set_high_card_heels(id)
+      @high_card_babyfaces = Wrestler.set_high_card_babyfaces(id).to_a
+      @high_card_heels = Wrestler.set_high_card_heels(id).to_a
       while (index < num_matches)
         match = Match.new
-        match.heel = @high_card_heels[Random.rand(0..(@high_card_heels.length-1))]
-        match.babyface = @high_card_babyfaces[Random.rand(0..(@high_card_babyfaces.length-1))]
+        @high_card_heels.shuffle!
+        match.heel = @high_card_heels.pop
+        @high_card_babyfaces.shuffle!
+        match.babyface = @high_card_babyfaces.pop
         match.position = position
         match.save
         matches << match
         index += 1
       end
     elsif position == 3
-      @mid_card_babyfaces = Wrestler.set_mid_card_babyfaces(id)
-      @mid_card_heels = Wrestler.set_mid_card_heels(id)
+      @mid_card_babyfaces = Wrestler.set_mid_card_babyfaces(id).to_a
+      @mid_card_heels = Wrestler.set_mid_card_heels(id).to_a
       while (index < num_matches)
         match = Match.new
-        match.heel = @mid_card_heels[Random.rand(0..(@mid_card_heels.length-1))]
-        match.babyface = @mid_card_babyfaces[Random.rand(0..(@mid_card_babyfaces.length-1))]
+        @mid_card_heels.shuffle!
+        match.heel = @mid_card_heels.pop
+        @mid_card_babyfaces.shuffle!
+        match.babyface = @mid_card_babyfaces.pop
         match.position = position
         match.save
         matches << match
         index += 1
       end
     elsif position == 2
-      @low_card_babyfaces = Wrestler.set_low_card_babyfaces(id)
-      @low_card_heels = Wrestler.set_low_card_heels(id)
+      @low_card_babyfaces = Wrestler.set_low_card_babyfaces(id).to_a
+      @low_card_heels = Wrestler.set_low_card_heels(id).to_a
       while (index < num_matches)
         match = Match.new
-        match.heel = @low_card_heels[Random.rand(0..(@low_card_heels.length-1))]
-        match.babyface = @low_card_babyfaces[Random.rand(0..(@low_card_babyfaces.length-1))]
+        @low_card_heels.shuffle!
+        match.heel = @low_card_heels.pop
+        @low_card_babyfaces.shuffle!
+        match.babyface = @low_card_babyfaces.pop
         match.position = position
         match.save
         matches << match
         index += 1
       end
     else
-      @undercard_babyfaces = Wrestler.set_undercard_babyfaces(id)
-      @undercard_heels = Wrestler.set_undercard_heels(id)
+      @undercard_babyfaces = Wrestler.set_undercard_babyfaces(id).to_a
+      @undercard_heels = Wrestler.set_undercard_heels(id).to_a
       while (index < num_matches)
         match = Match.new
-        match.heel = @undercard_heels[Random.rand(0..(@undercard_heels.length-1))]
-        match.babyface = @undercard_babyfaces[Random.rand(0..(@undercard_babyfaces.length-1))]
+        @undercard_heels.shuffle!
+        match.heel = @undercard_heels.pop
+        @undercard_babyfaces.shuffle!
+        match.babyface = @undercard_babyfaces.pop
         match.position = position
         match.save
         matches << match
