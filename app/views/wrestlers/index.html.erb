@@ -4,7 +4,11 @@
 	<div class="col-lg-12">
 		<hr>
 		<h1 class="text-center">
-			<%=current_user.promotion  %> -- Roster</h1>
+			<%unless current_user.promotion.blank?  %>
+				<%=current_user.promotion  %> -- Roster</h1>
+			<%else  %>
+					<h1>Roster</h1>
+			<%end  %>
 		<hr>
 	</div>
 </div>
@@ -16,7 +20,8 @@
 			<h2 class="text-center">
 				<strong>Your Wrestlers in the Main Event! </h2></strong>
 				<h3 class ="intro-text text-center"><u>Babyfaces (Tecnicos)</u> </h3>
-				<% @main_event_babyfaces.each do |wrestler|  %>
+			<%unless @main_event_babyfaces.blank?  %>
+			<% @main_event_babyfaces.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
 						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 						<h3><%= wrestler.name  %>
@@ -28,6 +33,13 @@
 		btn-small btn-danger" %></p></h6>
 					</div>
 					<%end  %>
+			<%else  %>
+				<h4 class ="intro-text text-center">
+				You have no babyface wrestlers able to compete in the Main Event! <%= link_to 'Hire a new wrestler', new_wrestler_path %><br>
+					Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+				</h4><br>
+					<h1 class="text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
+			<%end  %>
 			</div>
 		</div>
 	</div>
@@ -36,7 +48,8 @@
 		<div class="col-lg-12">
 			<hr>
 <h3 class ="intro-text text-center"><u>Heels (Rudos)</u> </h3>
-			<% @main_event_heels.each do |wrestler|  %>
+			<%unless @main_event_heels.blank?  %>
+				<% @main_event_heels.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
 						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 						<h3><%= wrestler.name  %>
@@ -47,6 +60,13 @@
 							<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 					</div>
+				<%end  %>
+			<%else  %>
+					<h4 class ="intro-text text-center">
+						You have no heel wrestlers able to compete in the Main Event! <%= link_to 'Hire a new wrestler', new_wrestler_path %><br>
+						Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+					</h4><br>
+					<h1 class="text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 			<%end  %>
 		</div>
 	</div>
@@ -59,7 +79,8 @@
 			<h2 class="text-center">
 				<strong>Your Wrestlers in the High Card! </h2></strong>
 			<h3 class ="intro-text text-center"><u>Babyfaces (Tecnicos)</u> </h3>
-			<% @high_card_babyfaces.each do |wrestler|  %>
+			<%unless @high_card_babyfaces.blank?  %>
+				<% @high_card_babyfaces.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
 						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 						<h3><%= wrestler.name  %>
@@ -70,6 +91,14 @@
 							<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 					</div>
+				<%end  %>
+			<%else  %>
+					<h4 class ="intro-text text-center">
+						You have no babyface wrestlers able to compete in the High Card! <%= link_to 'Hire a new wrestler',
+																																									 new_wrestler_path %><br>
+						Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+					</h4><br>
+					<h1 class = "text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 			<%end  %>
 		</div>
 	</div>
@@ -79,7 +108,8 @@
 		<div class="col-lg-12">
 			<hr>
 			<h3 class ="intro-text text-center"><u>Heels (Rudos)</u> </h3>
-			<% @high_card_heels.each do |wrestler|  %>
+				<% unless @high_card_heels.blank?  %>
+				<% @high_card_heels.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
 						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 						<h3><%= wrestler.name  %>
@@ -90,6 +120,14 @@
 							<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 					</div>
+				<%end  %>
+			<%else  %>
+					<h4 class ="intro-text text-center">
+						You have no heel wrestlers able to compete in the High Card! <%= link_to 'Hire a new wrestler',
+																																												 new_wrestler_path %><br>
+						Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+					</h4><br>
+					<h1 class = "text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 			<%end  %>
 		</div>
 	</div>
@@ -102,7 +140,8 @@
 					<h2 class="text-center">
 						<strong>Your Wrestlers in the Mid Card! </h2></strong>
 					<h3 class ="intro-text text-center"><u>Babyfaces (Tecnicos)</u> </h3>
-					<% @mid_card_babyfaces.each do |wrestler|  %>
+					<%unless @mid_card_babyfaces.blank?  %>
+						<% @mid_card_babyfaces.each do |wrestler|  %>
 							<div class="col-sm-4 text-center">
 								<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 								<h3><%= wrestler.name  %>
@@ -113,7 +152,16 @@
 									<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 							</div>
+						<%end  %>
+					<%else  %>
+							<h4 class ="intro-text text-center">
+								You have no babyface wrestlers able to compete in the Mid Card! <%= link_to 'Hire a new wrestler',
+																																														 new_wrestler_path %><br>
+								Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+							</h4><br>
+							<h1 class = "text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 					<%end  %>
+
 				</div>
 			</div>
 		</div>
@@ -122,7 +170,8 @@
 				<div class="col-lg-12">
 					<hr>
 					<h3 class ="intro-text text-center"><u>Heels (Rudos)</u> </h3>
-					<% @mid_card_heels.each do |wrestler|  %>
+					<%unless @mid_card_heels.blank?  %>
+						<% @mid_card_heels.each do |wrestler|  %>
 							<div class="col-sm-4 text-center">
 								<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 								<h3><%= wrestler.name  %>
@@ -133,6 +182,14 @@
 									<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 							</div>
+						<%end  %>
+					<%else  %>
+							<h4 class ="intro-text text-center">
+								You have no heel wrestlers able to compete in the Mid Card! <%= link_to 'Hire a new wrestler',
+																																														 new_wrestler_path %><br>
+								Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+							</h4><br>
+							<h1 class = "text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 					<%end  %>
 				</div>
 			</div>
@@ -145,7 +202,8 @@
 						<h2 class="text-center">
 							<strong>Your Wrestlers in the Low Card! </h2></strong>
 						<h3 class ="intro-text text-center"><u>Babyfaces (Tecnicos)</u> </h3>
-						<% @low_card_babyfaces.each do |wrestler|  %>
+						<%unless @low_card_babyfaces.blank?  %>
+							<% @low_card_babyfaces.each do |wrestler|  %>
 								<div class="col-sm-4 text-center">
 									<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 									<h3><%= wrestler.name  %>
@@ -156,6 +214,14 @@
 										<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 								</div>
+							<%end  %>
+						<%else  %>
+								<h4 class ="intro-text text-center">
+									You have no babyface wrestlers able to compete in the Low Card! <%= link_to 'Hire a new wrestler',
+																																															 new_wrestler_path %><br>
+									Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+								</h4><br>
+								<h1 class = "text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 						<%end  %>
 					</div>
 				</div>
@@ -165,7 +231,8 @@
 					<div class="col-lg-12">
 						<hr>
 						<h3 class ="intro-text text-center"><u>Heels (Rudos)</u> </h3>
-						<% @low_card_heels.each do |wrestler|  %>
+						<%unless @low_card_heels.blank?  %>
+							<% @low_card_heels.each do |wrestler|  %>
 								<div class="col-sm-4 text-center">
 									<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 									<h3><%= wrestler.name  %>
@@ -176,6 +243,14 @@
 										<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 								</div>
+							<%end  %>
+						<%else  %>
+								<h4 class ="intro-text text-center">
+									You have no heel wrestlers able to compete in the Low Card! <%= link_to 'Hire a new wrestler',
+																																															 new_wrestler_path %><br>
+									Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+								</h4><br>
+								<h1 class = "text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 						<%end  %>
 					</div>
 				</div>
@@ -188,7 +263,8 @@
 							<h2 class="text-center">
 								<strong>Your Wrestlers in the Undercard! </h2></strong>
 							<h3 class ="intro-text text-center"><u>Babyfaces (Tecnicos)</u> </h3>
-							<% @undercard_babyfaces.each do |wrestler|  %>
+							<%unless @undercard_babyfaces.blank?  %>
+								<% @undercard_babyfaces.each do |wrestler|  %>
 									<div class="col-sm-4 text-center">
 										<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 										<h3><%= wrestler.name  %>
@@ -199,6 +275,14 @@
 											<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 									</div>
+								<%end  %>
+							<%else  %>
+									<h4 class ="intro-text text-center">
+										You have no babyface wrestlers able to compete in the Undercard! <%= link_to 'Hire a new wrestler',
+																																																 new_wrestler_path %><br>
+										Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+									</h4><br>
+									<h1 class = "text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 							<%end  %>
 						</div>
 					</div>
@@ -208,7 +292,8 @@
 						<div class="col-lg-12">
 							<hr>
 							<h3 class ="intro-text text-center"><u>Heels (Rudos)</u> </h3>
-							<% @undercard_heels.each do |wrestler|  %>
+							<%unless @undercard_heels.blank?  %>
+								<% @undercard_heels.each do |wrestler|  %>
 									<div class="col-sm-4 text-center">
 										<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 										<h3><%= wrestler.name  %>
@@ -219,6 +304,14 @@
 											<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
 		btn-small btn-danger" %></p></h6>
 									</div>
+								<%end  %>
+							<%else  %>
+									<h4 class ="intro-text text-center">
+										You have no heel wrestlers able to compete in the Undercard! <%= link_to 'Hire a new wrestler',
+																																																 new_wrestler_path %><br>
+										Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+									</h4><br>
+									<h1 class = "text-center"> SHOVE THAT CONTROL INTO A NOSE DIVE!!!</h1>
 							<%end  %>
 						</div>
 					</div>
