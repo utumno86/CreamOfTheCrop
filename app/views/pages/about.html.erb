@@ -1,7 +1,91 @@
 <% content_for :title do %>About<% end %>
-<h3>About the Website</h3>
-<p>
-This web application was created with
-<%= link_to('Rails Composer', 'http://railsapps.github.io/rails-composer/') %>
-from the <%= link_to('RailsApps project', 'http://railsapps.github.io/') %>.
-</p>
+<div class="row">
+	<div class="box">
+		<div class="col-lg-12 text-center">
+			<h2 class="brand-before">
+				<small>About</small>
+			</h2>
+			<h1 class="brand-name">Cream of the Crop</h1>
+			</div>
+		</div>
+	</div
+<div class="row">
+	<div class="box">
+		<div class="col-lg-12">
+			<hr>
+			<h2 class="intro-text text-center">Shove that control into a nose dive
+				<strong>Ho Krogan</strong>
+			</h2>
+			<hr>
+			<%= image_tag "intro-pic-2.jpg", class: "img-responsive img-border img-left"  %>
+			<hr class="visible-xs">
+			<p>Michael Nash is a Ruby on Rails developer.  He is a recent graduate of The Iron Yard St Peterburg’s Ruby on
+				Rails program. He is also a former academic, with an MA in Chinese History from Columbia and years of travel
+				and language experience around Asia.</p>
+
+				<p>His current projects include (but are not limited to) developing a series of Rails engines as a supplement
+						 to rails composer, working through the problems on the Euler Project, working through the Learnynode
+					program to learn Node.js, and and learning the basics of Python.</p>
+
+				<p>Michael has loads of open source code available at his <%=link_to 'Github profile', 'https://github.com/utumno86'  %></p>
+
+				<p>He tweets at <%=link_to '@utumno86', 'https://twitter.com/utumno86'  %></p>
+
+				<p>His profile is available at Github <%=link_to 'here', 'http://utumno86.github.io/'  %></p>
+			</div>
+		</div>
+	</div>
+<div class="row">
+	<div class="box">
+		<div class="col-lg-12">
+			<hr>
+			<h2 class="intro-text text-center">A Glossary of Wrestling Terms
+			</h2>
+			<p>These definitions are lifted verbatim from a <%=link_to 'Grantland article', 'http://grantland.com/features/grantland-dictionary-pro-wrestling-edition/'   %> by the great wrestling
+				journalist David
+				Shoemaker, AKA The Masked Man. </p>
+			<p>babyface (n.) — A heroic or good-guy wrestler. (Also known as: face; baby [archaic].) (Antonym: heel.)</p>
+			<p>card (n.) — Traditionally, a night’s match lineup; more broadly, a measure of position within the promotion or company, as in, “Joe’s a main-eventer. He’s at the top of the card.”</p>
+			<p>finish (n.) — The scripted ending of a match. A finisher is a wrestler’s match-ending move. A clean finish is a fair pinfall win; a dirty finish occurs when the ending is marred by cheating or is otherwise in dispute; a false finish is when the wrestlers convey one ending only for it to turn out to be misdirection or to have it reversed. A Dusty finish is a particularly notorious form of false finish wherein the underdog hero appears to beat his foe, only to have the win overturned on a technicality at a later date; this allows the fans to have the excitement of a big win while maintaining the status quo. A screwjob is a finish in which the promoter and one wrestler conspire to have the other wrestler lose without his foreknowledge. A double cross is when a wrestler refuses to abide by the scripted ending, usually of his own volition (a version of going into business for oneself), described by Jim Cornette as “no-sell and drive away.” The finish man is a member of a tag team whose role is to work the ending of a (usually victorious) match.</p>
+			<p>foreign object (n.) — The unnecessarily officious term for an illegal weapon secretly used in a match. Examples include (but are not limited to) rolls of quarters, brass knuckles, lengths of chain, spikes, pencils, loaded gloves, and loaded boots. Championship belts and other ringside accoutrements (microphones, ring bells, ring stairs, etc.) are illegal objects but not literally foreign. During the 1980s, Turner Broadcasting Company disallowed the term during broadcasts, so they temporarily substituted international object.</p>
+			<p>gimmick (n.) — A wrestler’s persona, character, or motif. As in, “The Russian’s working the evil-foreigner gimmick.” It can also refer to the scripted quality of a match, as in, “That match had too much gimmick.” In insider usage, it can also refer to plunder used in the ring or any unusual foreign object introduced, like, “For the ending, let’s have the Russian hit Joe with a gimmick.” (In this instance, it’s a synonym for fernum.) In backstage lingo, “gimmick” is a stand-in for basically any physical noun, like referring to a bag by saying “grab your gimmick and let’s go” or referring to a pacemaker as a “heart gimmick”; or as a euphemism for drugs, from prescribed painkillers to street drugs. If an object is “gimmicked,” it’s rigged for misdirection, as in a chair or table made to easily fall apart when used as a weapon.</p>
+			<p>heel (n.) — A bad-guy wrestler. Antonym of babyface. A monster heel is a massive, frightening villain.</p>
+			<p>indies (n.) — The modern term for independent, usually small-scale, wrestling promotions without a national television presence. At this point it functionally means any promotion that isn’t WWE or TNA.</p>
+			<p>lucha libre (n.) — Literally “free fighting”; Mexican (or Mexican-style) wrestling, known for acrobatic moves, a more performative combat style that borders on the ridiculous, and cartoonish good-versus-evil storytelling.</p>
+			<p>turn (n.) — The act of switching between being a hero and a villain in a story line. In rare instances, a face and heel will both switch sides during the course of a match; this is known as a “double turn.” (See also: face turn; heel turn.)</p>
+			</div>
+		</div>
+	</div>
+<div class="row">
+	<div class="box">
+		<div class="col-lg-12">
+			<hr>
+			<h2 class="intro-text text-center">Space Mountain may be the oldest ride in the park, but it has the longest line
+			</h2>
+			<hr>
+			<%= image_tag "intro-pic-3.jpg", class: "img-responsive img-border img-left"  %>
+			<hr class="visible-xs">
+			<p>This web application was created for the Summer 2015 Ruby on Rails Engineering Cohort of the <%=link_to 'Iron Yard
+				Tampa/St.Petersburg', 'http://theironyard.com/locations/tampa-st-petersburg/' %></p>
+			<p>This web application was created with
+			<%= link_to('Rails Composer', 'http://railsapps.github.io/rails-composer/') %>
+			from the <%= link_to('RailsApps project', 'http://railsapps.github.io/') %>.
+			</p>
+			<p>This application requires:
+
+				- Ruby 2.2.2
+				- Rails 4.2.1</p>
+
+<!-- Copyright 2013-2015 Iron Summit Media Strategies, LLC
+-
+-   Licensed under the Apache License, Version 2.0 (the "License");
+-   you may not use this file except in compliance with the License.
+-   You may obtain a copy of the License at
+-
+-       http://www.apache.org/licenses/LICENSE-2.0
+-
+-   Unless required by applicable law or agreed to in writing, software
+-   distributed under the License is distributed on an "AS IS" BASIS,
+-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-   See the License for the specific language governing permissions and
+-   limitations under the License.-->
