@@ -13,6 +13,7 @@ gem 'mandrill-api', '1.0.53'
 gem 'mini_magick', '4.2.7'
 gem 'fog', '1.32.0'
 gem 'carrierwave', '0.10.0'
+gem 'faker', '1.4.3', require => false 
 
 group :development, :test do
   gem 'byebug', '5.0.0'
@@ -37,7 +38,6 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails', '4.5.0'
-  gem 'faker', '1.4.3'
   gem 'pry-rails', '0.3.4'
   gem 'pry-rescue', '1.4.2'
   gem 'rspec-rails', '3.3.2'
