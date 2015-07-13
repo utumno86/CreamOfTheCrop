@@ -35,13 +35,13 @@
 						<%end  %>
 					</p>
 					<p>
+						<%unless @wrestler.user.promotion.blank?  %>
 						This wrestler is currently performing in the <%=@wrestler.user.promotion  %> promotion under owner <%=
 							@wrestler.user.name %>.
+						<%end  %>
 					</p>
 					<p><%= link_to 'Change Wrestler Profile', edit_wrestler_path(@wrestler), class: "btn btn-large btn-info" %>
 						<br>
-					</p>
-					<p><%= link_to 'Back', wrestlers_path, class: "btn btn-large btn-danger" %>
 					</p>
 			</div>
 		</div>
