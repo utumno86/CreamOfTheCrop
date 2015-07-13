@@ -23,13 +23,19 @@
 			<% @main_event_babyfaces.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
 						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-						<h3><%= wrestler.name  %>
-						</h3>
-						<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-						%></p>
-							<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-							<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
+					<div class="btn-group pull-right wrestler-options-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">
+							<i class="glyphicon glyphicon-cog"></i>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><%= link_to 'Wrestler Profile', wrestler%></li>
+							<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+							<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+						</ul>
+					</div>
+						<h3 class="text-left"><%= wrestler.name %></h3>
 					</div>
 					<%end  %>
 			<%else  %>
@@ -51,13 +57,19 @@
 				<% @main_event_heels.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
 						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-						<h3><%= wrestler.name  %>
-						</h3>
-						<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-						%></p>
-							<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-							<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
+						<div class="btn-group pull-right wrestler-options-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">
+								<i class="glyphicon glyphicon-cog"></i>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><%= link_to 'Wrestler Profile', wrestler%></li>
+								<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+								<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+							</ul>
+						</div>
+						<h3 class="text-left"><%= wrestler.name %></h3>
 					</div>
 				<%end  %>
 			<%else  %>
@@ -81,13 +93,19 @@
 				<% @high_card_babyfaces.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
 						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-						<h3><%= wrestler.name  %>
-						</h3>
-						<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-						%></p>
-							<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-							<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
+						<div class="btn-group pull-right wrestler-options-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">
+								<i class="glyphicon glyphicon-cog"></i>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><%= link_to 'Wrestler Profile', wrestler%></li>
+								<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+								<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+							</ul>
+						</div>
+						<h3 class="text-left"><%= wrestler.name %></h3>
 					</div>
 				<%end  %>
 			<%else  %>
@@ -107,17 +125,24 @@
 			<hr>
 			<h3 class ="intro-text text-center"><u>Heels (Rudos)</u> </h3>
 				<% unless @high_card_heels.blank?  %>
-				<% @high_card_heels.each do |wrestler|  %>
+					<% @high_card_heels.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
 						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-						<h3><%= wrestler.name  %>
-						</h3>
-						<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-						%></p>
-							<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-							<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
-					</div>
+
+							<div class="btn-group pull-right wrestler-options-group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+												aria-haspopup="true" aria-expanded="false">
+									<i class="glyphicon glyphicon-cog"></i>
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><%= link_to 'Wrestler Profile', wrestler%></li>
+									<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+									<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+								</ul>
+							</div>
+							<h3 class="text-left"><%= wrestler.name %></h3>
+							</div>
 				<%end  %>
 			<%else  %>
 					<h4 class ="intro-text text-center">
@@ -139,16 +164,22 @@
 					<h3 class ="intro-text text-center"><u>Babyfaces (Tecnicos)</u> </h3>
 					<%unless @mid_card_babyfaces.blank?  %>
 						<% @mid_card_babyfaces.each do |wrestler|  %>
-							<div class="col-sm-4 text-center">
-								<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-								<h3><%= wrestler.name  %>
-								</h3>
-								<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-								%></p>
-									<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-									<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
-							</div>
+									<div class="col-sm-4 text-center">
+										<%=image_tag wrestler.image.url, class: "img-responsive"  %>
+									<div class="btn-group pull-right wrestler-options-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+														aria-haspopup="true" aria-expanded="false">
+											<i class="glyphicon glyphicon-cog"></i>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><%= link_to 'Wrestler Profile', wrestler%></li>
+											<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+											<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+										</ul>
+									</div>
+									<h3 class="text-left"><%= wrestler.name %></h3>
+									</div>
 						<%end  %>
 					<%else  %>
 							<h4 class ="intro-text text-center">
@@ -171,13 +202,19 @@
 						<% @mid_card_heels.each do |wrestler|  %>
 							<div class="col-sm-4 text-center">
 								<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-								<h3><%= wrestler.name  %>
-								</h3>
-								<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-								%></p>
-									<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-									<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
+								<div class="btn-group pull-right wrestler-options-group">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+													aria-haspopup="true" aria-expanded="false">
+										<i class="glyphicon glyphicon-cog"></i>
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><%= link_to 'Wrestler Profile', wrestler%></li>
+										<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+										<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+									</ul>
+								</div>
+								<h3 class="text-left"><%= wrestler.name %></h3>
 							</div>
 						<%end  %>
 					<%else  %>
@@ -202,13 +239,19 @@
 							<% @low_card_babyfaces.each do |wrestler|  %>
 								<div class="col-sm-4 text-center">
 									<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-									<h3><%= wrestler.name  %>
-									</h3>
-									<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-									%></p>
-										<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-										<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
+									<div class="btn-group pull-right wrestler-options-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+														aria-haspopup="true" aria-expanded="false">
+											<i class="glyphicon glyphicon-cog"></i>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><%= link_to 'Wrestler Profile', wrestler%></li>
+											<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+											<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+										</ul>
+									</div>
+									<h3 class="text-left"><%= wrestler.name %></h3>
 								</div>
 							<%end  %>
 						<%else  %>
@@ -231,13 +274,19 @@
 							<% @low_card_heels.each do |wrestler|  %>
 								<div class="col-sm-4 text-center">
 									<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-									<h3><%= wrestler.name  %>
-									</h3>
-									<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-									%></p>
-										<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-										<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
+									<div class="btn-group pull-right wrestler-options-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+														aria-haspopup="true" aria-expanded="false">
+											<i class="glyphicon glyphicon-cog"></i>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><%= link_to 'Wrestler Profile', wrestler%></li>
+											<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+											<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+										</ul>
+									</div>
+									<h3 class="text-left"><%= wrestler.name %></h3>
 								</div>
 							<%end  %>
 						<%else  %>
@@ -262,13 +311,19 @@
 								<% @undercard_babyfaces.each do |wrestler|  %>
 									<div class="col-sm-4 text-center">
 										<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-										<h3><%= wrestler.name  %>
-										</h3>
-										<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-										%></p>
-											<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-											<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
+										<div class="btn-group pull-right wrestler-options-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+														aria-haspopup="true" aria-expanded="false">
+											<i class="glyphicon glyphicon-cog"></i>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><%= link_to 'Wrestler Profile', wrestler%></li>
+											<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+											<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+										</ul>
+									</div>
+										<h3 class="text-left"><%= wrestler.name %></h3>
 									</div>
 								<%end  %>
 							<%else  %>
@@ -284,20 +339,26 @@
 				</div>
 				<div class="row">
 					<div class="box">
-						<div class="col-lg-12">
+						< class="col-lg-12">
 							<hr>
 							<h3 class ="intro-text text-center"><u>Heels (Rudos)</u> </h3>
 							<%unless @undercard_heels.blank?  %>
 								<% @undercard_heels.each do |wrestler|  %>
 									<div class="col-sm-4 text-center">
 										<%=image_tag wrestler.image.url, class: "img-responsive"  %>
-										<h3><%= wrestler.name  %>
-										</h3>
-										<h6 class= "text-center"><p><%= link_to 'Wrestler Profile', wrestler, class: "btn btn-small btn-primary"
-										%></p>
-											<p><%= link_to 'Change Details', edit_wrestler_path(wrestler), class: "btn btn-small btn-info" %></p>
-											<p><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn
-		btn-small btn-danger" %></p></h6>
+										<div class="btn-group pull-right wrestler-options-group">
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+												<i class="glyphicon glyphicon-cog"></i>
+												<span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><%= link_to 'Wrestler Profile', wrestler%></li>
+												<li><%= link_to 'Change Details', edit_wrestler_path(wrestler) %></li>
+												<li><%= link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+											</ul>
+										</div>
+										<h3 class="text-left"><%= wrestler.name %></h3>
 									</div>
 								<%end  %>
 							<%else  %>
