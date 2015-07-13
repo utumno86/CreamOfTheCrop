@@ -2,42 +2,42 @@
 <div class="row">
 	<div class="box">
 		<div class="col-lg-12">
-			<h1 class="text-center">Your card is:</h1>
-			</div>
-		</div>
-	</div>
-
-			<% index = 8 %>
+			<table>
+			<thead>
+				<tr>
+					<th colspan=5>
+						<h1 class="text-center"> Card Number: <%= @card.id %></h1>
+				</tr>
+			</thead>
+			<tbody>
 			<% @card.matches.each do |match|  %>
-			<div class="row">
-				<div class="box">
-					<div class="col-lg-12">
-				<%unless match.heel.blank? || match.babyface.blank?  %>
-							<h3 class ="intro-text text-center"><u>Match <%= index %></u> </h3>
-							<div class="col-sm-4 text-left">
-								<h4 class="intro-text"><u><%=match.babyface.name %></u></h4>
-								<br><br><br><br>
-								<%=image_tag match.babyface.image.url, class: "img-responsive"  %>
-							</div>
-							<div class="col-sm-4 text-center">
-								<br>
-								<br>
-								<br>
-								<br>
-								<h2>VS.</h2>
-							</div>
-							<div class="col-sm-4 text-right">
-								<h4 class="intro-text"><u><%=match.heel.name %></u></h4>
-								<br><br><br><br>
-								<%=image_tag match.heel.image.url, class: "img-responsive"  %>
-							</div>
+				<tr>
+					<%unless match.heel.blank? || match.babyface.blank?  %>
+						<td>
+							<%=image_tag match.babyface.image.url, class: "img-responsive avatar"  %>
+						</td>
+						<td>
+							<h4 class="intro-text wrestler_name"><u><%=match.babyface.name %></u></h4>
+						</td>
+						<td>
+							<h2>         VS.       </h2>
+						</td>
+						<td>
+							<h4 class="intro-text wrestler_name"><u><%=match.heel.name %></u></h4>
+						</td>
+						<td>
+							<%=image_tag match.heel.image.url, class: "img-responsive avatar"  %>
+						</td>
 					<%else  %>
 							<h2>Youd do not have enough wrestlers to have a match at position <%=index  %>. Hire a new wrestler,
 								turn a face heel, or turn a heel face</h2>
 					<%end  %>
-				<%index -= 1  %>
+					</tr>
+			<%end %>
+			</tbody>
+		</table>
 					</div>
 				</div>
 			</div>
-			<%end %>
+
 </div>
