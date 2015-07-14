@@ -18,3 +18,42 @@
 .wrestler-options-group {
   margin-top: 15px;
 }
+
+.avatar {
+  height: 100px;
+  width: 150px;
+}
+
+.avatar_cell_babyface {
+  padding: 20px;
+  border-top: solid;
+  border-bottom: solid;
+  border-left: solid;
+}
+
+.avatar_cell_heel {
+  padding: 20px;
+  border-top: solid;
+  border-bottom: solid;
+  border-right: solid;
+}
+
+.vs {
+  text-align: center;
+  border-top: solid;
+  border-bottom: solid;
+  text-emphasis: black;
+}
+
+.wrestler_name_babyface {
+  text-align: left;
+  border-top: solid;
+  border-bottom: solid;
+}
+
+.wrestler_name_heel {
+  text-align: right;
+  border-top: solid;
+  border-bottom: solid;
+}
+
