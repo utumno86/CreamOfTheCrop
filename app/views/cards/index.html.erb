@@ -7,6 +7,7 @@
 				<tr>
 					<th colspan=5>
 						<h1 class="text-center"> Card Number: <%= @card.id %></h1>
+					</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -29,7 +30,7 @@
 							<%=image_tag match.heel.image.url, class: "img-responsive avatar"  %>
 						</td>
 					<%else  %>
-							<h2>Youd do not have enough wrestlers to have a match at position <%=index  %>. Hire a new wrestler,
+							<h2>Youd do not have enough wrestlers to have a match at this position. Hire a new wrestler,
 								turn a face heel, or turn a heel face</h2>
 					<%end  %>
 					</tr>
