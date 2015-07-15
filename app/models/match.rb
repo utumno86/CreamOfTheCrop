@@ -1,15 +1,15 @@
 class Match < ActiveRecord::Base
-  belongs_to :babyface, class_name: "Wrestler"
-  belongs_to :heel, class_name: "Wrestler"
+  belongs_to :babyface, class_name: 'Wrestler'
+  belongs_to :heel, class_name: 'Wrestler'
   belongs_to :card
 
-  def self.set_match(position,id, num_matches)
+  def self.set_match(position, id, num_matches)
     index = 0
     matches = []
     if position == 5
       @main_event_babyfaces = Wrestler.set_main_event_babyfaces(id, false).to_a
       @main_event_heels = Wrestler.set_main_event_heels(id, false).to_a
-      while (index < num_matches)
+      while index < num_matches
         match = Match.new
         @main_event_heels.shuffle!
         match.heel = @main_event_heels.pop
@@ -23,7 +23,7 @@ class Match < ActiveRecord::Base
     elsif position == 4
       @high_card_babyfaces = Wrestler.set_high_card_babyfaces(id, false).to_a
       @high_card_heels = Wrestler.set_high_card_heels(id, false).to_a
-      while (index < num_matches)
+      while index < num_matches
         match = Match.new
         @high_card_heels.shuffle!
         match.heel = @high_card_heels.pop
@@ -37,7 +37,7 @@ class Match < ActiveRecord::Base
     elsif position == 3
       @mid_card_babyfaces = Wrestler.set_mid_card_babyfaces(id, false).to_a
       @mid_card_heels = Wrestler.set_mid_card_heels(id, false).to_a
-      while (index < num_matches)
+      while index < num_matches
         match = Match.new
         @mid_card_heels.shuffle!
         match.heel = @mid_card_heels.pop
@@ -51,7 +51,7 @@ class Match < ActiveRecord::Base
     elsif position == 2
       @low_card_babyfaces = Wrestler.set_low_card_babyfaces(id, false).to_a
       @low_card_heels = Wrestler.set_low_card_heels(id, false).to_a
-      while (index < num_matches)
+      while index < num_matches
         match = Match.new
         @low_card_heels.shuffle!
         match.heel = @low_card_heels.pop
@@ -65,7 +65,7 @@ class Match < ActiveRecord::Base
     else
       @undercard_babyfaces = Wrestler.set_undercard_babyfaces(id, false).to_a
       @undercard_heels = Wrestler.set_undercard_heels(id, false).to_a
-      while (index < num_matches)
+      while index < num_matches
         match = Match.new
         @undercard_heels.shuffle!
         match.heel = @undercard_heels.pop
@@ -77,6 +77,5 @@ class Match < ActiveRecord::Base
         index += 1
       end
     end
-    return matches
   end
 end

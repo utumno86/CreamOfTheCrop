@@ -13,7 +13,7 @@ gem 'mandrill-api', '1.0.53'
 gem 'mini_magick', '4.2.7'
 gem 'fog', '1.32.0'
 gem 'carrierwave', '0.10.0'
-gem 'faker', '1.4.3', :require => false 
+gem 'faker', '1.4.3', :require => false
 
 group :development, :test do
   gem 'byebug', '5.0.0'
@@ -25,12 +25,12 @@ gem 'bootstrap-sass', '3.3.5.1'
 gem 'devise', '3.5.1'
 gem 'high_voltage', '2.3.0'
 gem 'pg', '0.18.2'
-gem 'puma','2.11.3'
+gem 'puma', '2.11.3'
 
 group :development do
   gem 'better_errors', '2.1.1'
   gem 'foreman', '0.78.0'
-  gem 'hub', :require=>nil
+  gem 'hub', :require => nil
   gem 'quiet_assets', '1.1.0'
   gem 'rails_layout', '1.0.26'
   gem 'spring-commands-rspec', '1.0.4'

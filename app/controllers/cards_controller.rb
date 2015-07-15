@@ -3,5 +3,4 @@ class CardsController < ApplicationController
   def index
     @card = Card.set_card(current_user.id)
   end
-
 end

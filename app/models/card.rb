@@ -24,7 +24,5 @@ class Card < ActiveRecord::Base
       card.matches << match
     end
     card.save
-    return card
   end
-
 end
