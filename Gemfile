@@ -14,6 +14,8 @@ gem 'mini_magick', '4.2.7'
 gem 'fog', '1.32.0'
 gem 'carrierwave', '0.10.0'
 gem 'faker', '1.4.3', :require => false
+gem 'tickle', '1.0.2'
+gem 'chronic', '0.2.3'
 
 group :development, :test do
   gem 'byebug', '5.0.0'

@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :wrestlers
-  resources :cards
+  resources :cards, :only => [:index, :show]
+  resources :show, :only => [:new, :create]
 end
