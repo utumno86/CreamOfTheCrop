@@ -1,3 +1,4 @@
+# Card governs a list of matches set to be performed on any given night
 class Card < ActiveRecord::Base
   has_many :matches
 
@@ -31,7 +32,7 @@ class Card < ActiveRecord::Base
   def self.clear(id)
     cards = Card.where(:user_id => id)
     cards.each do |card|
-      card.matches.each & (:delete)
+      card.matches.each(&:delete)
       card.delete
     end
   end
