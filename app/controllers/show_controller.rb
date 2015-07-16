@@ -1,8 +1,10 @@
 # This class is intended to get information about cards from the user and transfer them over into the cards controller
 class ShowController < ApplicationController
-  def new
+  def index
+
   end
 
-  def ceate
+  def create
+    Card.clear(current_user.id)
   end
 end

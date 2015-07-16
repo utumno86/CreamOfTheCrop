@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :users
   resources :wrestlers
   resources :cards, :only => [:index, :show]
-  resources :show, :only => [:new, :create]
+  resources :show, :only => [:index, :create]
 end

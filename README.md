@@ -55,8 +55,3 @@ A couple of notes about it:
 
 
 In general, I welcome your questions, comments or concerns.
-
-Documentation and Support
--------------------------
-
--------

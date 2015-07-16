@@ -424,7 +424,6 @@ DEPENDENCIES
   byebug (= 5.0.0)
   capybara (= 2.4.4)
   carrierwave (= 0.10.0)
-  chronic (= 0.2.3)
   coffee-rails (~> 4.1.0)
   database_cleaner (= 1.4.1)
   devise (= 3.5.1)
@@ -432,6 +431,7 @@ DEPENDENCIES
   faker (= 1.4.3)
   fog (= 1.32.0)
   foreman (= 0.78.0)
+  haml (= 4.0.6)
   high_voltage (= 2.3.0)
   hub
   jbuilder (~> 2.0)
