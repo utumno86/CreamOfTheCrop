@@ -2,7 +2,7 @@ class Card < ActiveRecord::Base
   has_many :matches
 
   def self.set_card(id)
-    card = Card.create
+    card = Card.new
     temp = Match.set_match(5, id, 1)
     temp.each do |match|
       card.matches << match
@@ -23,15 +23,15 @@ class Card < ActiveRecord::Base
     temp.each do |match|
       card.matches << match
     end
+    card.user_id = id
     card.save
+    return card
   end
 
   def self.clear(id)
     cards = Card.where(:user_id => id)
     cards.each do |card|
-      card.matches.each do |match|
-        match.delete
-      end
+      card.matches.each & (:delete)
       card.delete
     end
   end

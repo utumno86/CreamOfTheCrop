@@ -77,5 +77,6 @@ class Match < ActiveRecord::Base
         index += 1
       end
     end
+    return matches
   end
 end
