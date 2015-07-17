@@ -1,12 +1,12 @@
 <%# add navigation links to this file %>
-<li><%= link_to 'Home', root_path %></li>
+<li><%= link_to image_tag('logo.png', :height => 75, :width => 150, :padding => 0, :margin => 0 ), root_path %></li>
 <% if user_signed_in? %>
-	<li><%= link_to 'Roster Page', wrestlers_path %></li>
-	<li><%= link_to 'Generate Show', show_index_path %></li>
-	<li><%= link_to 'View Shows', cards_path %>
-  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+	<li><%= link_to 'Roster Page', wrestlers_path, class: 'nav_item' %></li>
+	<li><%= link_to 'Generate Card!', cards_path, class: 'nav_item' %></li>
+	<li><%= link_to 'Edit Account', edit_user_registration_path, class: 'nav_item' %></li>
+  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete', class: 'nav_item' %></li>
 <% else %>
-  <li><%= link_to 'Sign in', new_user_session_path %></li>
-  <li><%= link_to 'Sign up', new_user_registration_path %></li>
-		<li><%= link_to 'Sign in with Google', user_omniauth_authorize_path(:google_oauth2)%></li>
+  <li><%= link_to 'Sign in', new_user_session_path, class: 'nav_item' %></li>
+  <li><%= link_to 'Sign up', new_user_registration_path, class: 'nav_item' %></li>
+		<li><%= link_to 'Sign in with Google', user_omniauth_authorize_path(:google_oauth2), class: 'nav_item'%></li>
 <% end %>

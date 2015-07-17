@@ -6,8 +6,6 @@ Rails.application.routes.draw do
     :omniauth_callbacks => 'omniauth_callbacks'
   }
 
-  resources :users
   resources :wrestlers
-  resources :cards, :only => [:index, :show]
-  resources :show, :only => [:index, :create]
+  resources :cards, :only => [:index]
 end
