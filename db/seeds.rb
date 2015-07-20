@@ -18,7 +18,7 @@ require 'faker'
     w.alignment = false
   end
   w.position = Random.rand(1..5)
-  w.user_id = 1
+  w.user_id = 2
   w.remote_image_url = ('http://loremflickr.com/640/480/wwe')
   w.save
 end
