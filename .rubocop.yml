@@ -9,8 +9,8 @@ AllCops:
    - 'db/schema.rb'
    - 'vendor/bundle/**/*'
 
-  Style/HashSyntax:
-    UseHashRocketsWithSymbolValues: true
-    
-  Metrics/LineLength:
-    Max: 120
+Style/HashSyntax:
+  EnforcedStyle: ruby18
+
+Metrics/LineLength:
+  Max: 120
