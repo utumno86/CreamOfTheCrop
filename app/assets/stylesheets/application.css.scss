@@ -29,6 +29,7 @@
   border-top: solid;
   border-bottom: solid;
   border-left: solid;
+  border-color: red;
 }
 
 .avatar_cell_heel {
@@ -36,6 +37,7 @@
   border-top: solid;
   border-bottom: solid;
   border-right: solid;
+  border-color: red;
 }
 
 .vs {
@@ -43,18 +45,21 @@
   border-top: solid;
   border-bottom: solid;
   text-emphasis: black;
+  color: red;
 }
 
 .wrestler_name_babyface {
   text-align: left;
   border-top: solid;
   border-bottom: solid;
+  border-color: red;
 }
 
 .wrestler_name_heel {
   text-align: right;
   border-top: solid;
   border-bottom: solid;
+  border-color: red;
 }
 
 .nav_item {
