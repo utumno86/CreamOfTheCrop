@@ -3,7 +3,7 @@
 	<div class="col-lg-12">
 		<hr>
 		<h1 class="text-center">
-			<%unless current_user.promotion.blank?  %>
+			<% unless current_user.promotion.blank?  %>
 				<%=current_user.promotion  %> -- Roster</h1>
 			<%else  %>
 					<h1>Roster</h1>
@@ -22,7 +22,7 @@
 			<%unless @main_event_babyfaces.blank?  %>
 			<% @main_event_babyfaces.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
-						<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 					<div class="btn-group pull-right wrestler-options-group">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 										aria-haspopup="true" aria-expanded="false">
@@ -56,7 +56,7 @@
 			<%unless @main_event_heels.blank?  %>
 				<% @main_event_heels.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
-						<%=image_tag wrestler.image.url, class: "img-responsive roster_image roster_image"  %>
+						<%=image_tag wrestler.image.url, class: "img-responsive"  %>
 						<div class="btn-group pull-right wrestler-options-group">
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 											aria-haspopup="true" aria-expanded="false">
@@ -92,7 +92,7 @@
 			<%unless @high_card_babyfaces.blank?  %>
 				<% @high_card_babyfaces.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
-						<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+						<%=image_tag wrestler.image.url, class: "img-responsive "  %>
 						<div class="btn-group pull-right wrestler-options-group">
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 											aria-haspopup="true" aria-expanded="false">
@@ -127,7 +127,7 @@
 				<% unless @high_card_heels.blank?  %>
 					<% @high_card_heels.each do |wrestler|  %>
 					<div class="col-sm-4 text-center">
-						<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+						<%=image_tag wrestler.image.url, class: "img-responsive "  %>
 
 							<div class="btn-group pull-right wrestler-options-group">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
@@ -166,7 +166,7 @@
 					<%unless @mid_card_babyfaces.blank?  %>
 						<% @mid_card_babyfaces.each do |wrestler|  %>
 									<div class="col-sm-4 text-center">
-										<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+										<%=image_tag wrestler.image.url, class: "img-responsive "  %>
 									<div class="btn-group pull-right wrestler-options-group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 														aria-haspopup="true" aria-expanded="false">
@@ -202,7 +202,7 @@
 					<%unless @mid_card_heels.blank?  %>
 						<% @mid_card_heels.each do |wrestler|  %>
 							<div class="col-sm-4 text-center">
-								<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+								<%=image_tag wrestler.image.url, class: "img-responsive "  %>
 								<div class="btn-group pull-right wrestler-options-group">
 									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 													aria-haspopup="true" aria-expanded="false">
@@ -239,7 +239,7 @@
 						<%unless @low_card_babyfaces.blank?  %>
 							<% @low_card_babyfaces.each do |wrestler|  %>
 								<div class="col-sm-4 text-center">
-									<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+									<%=image_tag wrestler.image.url, class: "img-responsive "  %>
 									<div class="btn-group pull-right wrestler-options-group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 														aria-haspopup="true" aria-expanded="false">
@@ -274,7 +274,7 @@
 						<%unless @low_card_heels.blank?  %>
 							<% @low_card_heels.each do |wrestler|  %>
 								<div class="col-sm-4 text-center">
-									<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+									<%=image_tag wrestler.image.url, class: "img-responsive "  %>
 									<div class="btn-group pull-right wrestler-options-group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 														aria-haspopup="true" aria-expanded="false">
@@ -312,7 +312,7 @@
 							<%unless @undercard_babyfaces.blank?  %>
 								<% @undercard_babyfaces.each do |wrestler|  %>
 									<div class="col-sm-4 text-center">
-										<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+										<%=image_tag wrestler.image.url, class: "img-responsive "  %>
 										<div class="btn-group pull-right wrestler-options-group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 														aria-haspopup="true" aria-expanded="false">
@@ -347,7 +347,7 @@
 							<%unless @undercard_heels.blank?  %>
 								<% @undercard_heels.each do |wrestler|  %>
 									<div class="col-sm-4 text-center">
-										<%=image_tag wrestler.image.url, class: "img-responsive roster_image"  %>
+										<%=image_tag wrestler.image.url, class: "img-responsive "  %>
 										<div class="btn-group pull-right wrestler-options-group">
 											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
 															aria-haspopup="true" aria-expanded="false">
