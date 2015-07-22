@@ -18,6 +18,6 @@
 
 $(document).ready(function() {
     $('.carousel').carousel({
-        interval: 2000 //changes the speed
+        interval: 7500 //changes the speed
     })
 });
