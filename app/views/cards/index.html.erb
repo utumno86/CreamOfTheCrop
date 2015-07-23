@@ -26,13 +26,13 @@
 							<%=image_tag @card.matches[0].babyface.image.url, class: "img-responsive, avatar" %>
 						</td>
 						<td class="wrestler_name_babyface">
-							<h1 class="text-danger"><u><%=@card.matches[0].babyface.name %></u></h1>
+							<h1 class="text-danger"><%= link_to @card.matches[0].babyface.name, @card.matches[0].babyface %></h1>
 						</td>
 						<td class="vs">
 							<h2>         VS.       </h2>
 						</td>
 						<td class="wrestler_name_heel">
-							<h1 class="text-danger"><u><%=@card.matches[0].heel.name %></u></h1>
+							<h1 class="text-danger"><%= link_to @card.matches[0].heel.name, @card.matches[0].heel %></h1>
 						</td>
 						<td class="avatar_cell_heel">
 							<%=image_tag @card.matches[0].heel.image.url, class: "img-responsive, avatar"%>
@@ -50,13 +50,13 @@
 							<%=image_tag @card.matches[1].babyface.image.url, class: "img-responsive, avatar" %>
 						</td>
 						<td class="wrestler_name_babyface">
-							<h2 class="text-danger"><u><%=@card.matches[1].babyface.name %></u></h2>
+							<h2 class="text-danger"><%= link_to @card.matches[1].babyface.name, @card.matches[1].babyface %></h2>
 						</td>
 						<td class="vs">
 							<h2>         VS.       </h2>
 						</td>
 						<td class="wrestler_name_heel">
-							<h2 class="text-danger"><u><%=@card.matches[1].heel.name %></u></h2>
+							<h2 class="text-danger"><%= link_to @card.matches[1].heel.name, @card.matches[1].heel %></h2>
 						</td>
 						<td class="avatar_cell_heel">
 							<%=image_tag @card.matches[1].heel.image.url, class: "img-responsive, avatar"%>
@@ -73,13 +73,13 @@
 							<%=image_tag @card.matches[2].babyface.image.url, class: "img-responsive, avatar" %>
 						</td>
 						<td class="wrestler_name_babyface">
-							<h2 class="text-danger"><u><%=@card.matches[2].babyface.name %></u></h2>
+							<h2 class="text-danger"><%= link_to @card.matches[2].babyface.name, @card.matches[2].babyface %></h2>
 						</td>
 						<td class="vs">
 							<h2>         VS.       </h2>
 						</td>
 						<td class="wrestler_name_heel">
-							<h2 class="text-danger"><u><%=@card.matches[2].heel.name %></u></h2>
+							<h2 class="text-danger"><%= link_to @card.matches[2].heel.name, @card.matches[2].heel %></h2>
 						</td>
 						<td class="avatar_cell_heel">
 							<%=image_tag @card.matches[2].heel.image.url, class: "img-responsive, avatar"%>
@@ -104,13 +104,13 @@
 							<%=image_tag @card.matches[3].babyface.image.url, class: "img-responsive, avatar" %>
 						</td>
 						<td class="wrestler_name_babyface">
-							<h3 class="text-danger"><u><%=@card.matches[3].babyface.name %></u></h3>
+							<h3 class="text-danger"><%= link_to @card.matches[3].babyface.name, @card.matches[3].babyface %></h3>
 						</td>
 						<td class="vs">
 							<h2>         VS.       </h2>
 						</td>
 						<td class="wrestler_name_heel">
-							<h3 class="text-danger"><u><%=@card.matches[3].heel.name %></u></h3>
+							<h3 class="text-danger"><%= link_to @card.matches[3].heel.name, @card.matches[3].heel %></h3>
 						</td>
 						<td class="avatar_cell_heel">
 							<%=image_tag @card.matches[3].heel.image.url, class: "img-responsive, avatar"%>
@@ -128,13 +128,13 @@
 							<%=image_tag @card.matches[4].babyface.image.url, class: "img-responsive, avatar" %>
 						</td>
 						<td class="wrestler_name_babyface">
-							<h3 class="text-danger"><u><%=@card.matches[4].babyface.name %></u></h3>
+							<h3 class="text-danger"><%= link_to @card.matches[4].babyface.name, @card.matches[4].babyface %></h3>
 						</td>
 						<td class="vs">
 							<h2>         VS.       </h2>
 						</td>
 						<td class="wrestler_name_heel">
-							<h3 class="text-danger"><u><%=@card.matches[4].heel.name %></u></h3>
+							<h3 class="text-danger"><%= link_to @card.matches[4].heel.name, @card.matches[4].heel %></h3>
 						</td>
 						<td class="avatar_cell_heel">
 							<%=image_tag @card.matches[4].heel.image.url, class: "img-responsive, avatar"%>
@@ -152,13 +152,13 @@
 							<%=image_tag @card.matches[5].babyface.image.url, class: "img-responsive, avatar" %>
 						</td>
 						<td class="wrestler_name_babyface">
-							<h4 class="text-danger"><u><%=@card.matches[5].babyface.name %></u></h4>
+							<h4 class="text-danger"><%= link_to @card.matches[5].babyface.name, @card.matches[5].babyface %></h4>
 						</td>
 						<td class="vs">
 							<h2>         VS.       </h2>
 						</td>
 						<td class="wrestler_name_heel">
-							<h4 class="text-danger"><u><%=@card.matches[5].heel.name %></u></h4>
+							<h4 class="text-danger"><%= link_to @card.matches[5].heel.name, @card.matches[5].heel %></h4>
 						</td>
 						<td class="avatar_cell_heel">
 							<%=image_tag @card.matches[5].heel.image.url, class: "img-responsive, avatar"%>
@@ -175,13 +175,13 @@
 							<%=image_tag @card.matches[6].babyface.image.url, class: "img-responsive, avatar" %>
 						</td>
 						<td class="wrestler_name_babyface">
-							<h4 class="text-danger"><u><%=@card.matches[6].babyface.name %></u></h4>
+							<h4 class="text-danger"><%= link_to @card.matches[6].babyface.name, @card.matches[6].babyface %></h4>
 						</td>
 						<td class="vs">
 							<h2>         VS.       </h2>
 						</td>
 						<td class="wrestler_name_heel">
-							<h4 class="text-danger"><u><%=@card.matches[6].heel.name %></u></h4>
+							<h4 class="text-danger"><%= link_to @card.matches[6].heel.name, @card.matches[6].heel %></h4>
 						</td>
 						<td class="avatar_cell_heel">
 							<%=image_tag @card.matches[6].heel.image.url, class: "img-responsive, avatar"%>
@@ -206,13 +206,13 @@
 							<%=image_tag @card.matches[7].babyface.image.url, class: "img-responsive, avatar" %>
 						</td>
 						<td class="wrestler_name_babyface">
-							<h5 class="text-danger"><u><%=@card.matches[7].babyface.name %></u></h5>
+							<h5 class="text-danger"><%= link_to @card.matches[7].babyface.name, @card.matches[7].babyface %></h5>
 						</td>
 						<td class="vs">
 							<h2>         VS.       </h2>
 						</td>
 						<td class="wrestler_name_heel">
-							<h5 class="text-danger"><u><%=@card.matches[7].heel.name %></u></h5>
+							<h5 class="text-danger"><%= link_to @card.matches[7].heel.name, @card.matches[7].heel %></h5>
 						</td>
 						<td class="avatar_cell_heel">
 							<%=image_tag @card.matches[7].heel.image.url, class: "img-responsive, avatar"%>
