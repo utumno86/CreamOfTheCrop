@@ -29,7 +29,7 @@
   border-top: solid;
   border-bottom: solid;
   border-left: solid;
-  border-color: red;
+  border-color: purple;
 }
 
 .avatar_cell_heel {
@@ -37,7 +37,7 @@
   border-top: solid;
   border-bottom: solid;
   border-right: solid;
-  border-color: red;
+  border-color: purple;
 }
 
 .roster_image {
@@ -50,21 +50,21 @@
   border-top: solid;
   border-bottom: solid;
   text-emphasis: black;
-  color: red;
+  color: purple;
 }
 
 .wrestler_name_babyface {
   text-align: left;
   border-top: solid;
   border-bottom: solid;
-  border-color: red;
+  border-color: purple;
 }
 
 .wrestler_name_heel {
   text-align: right;
   border-top: solid;
   border-bottom: solid;
-  border-color: red;
+  border-color: purple;
 }
 
 .nav_item {
@@ -74,6 +74,15 @@
 
 .error_row {
   border: solid;
-  color: red;
-  background-color: gray;
+  border-color: purple;
+  background-color: purple;
+
+  p {
+    background-color: white;
+    margin: 0;
+  }
+
+  h1, h2, h3 {
+    color: white;
+  }
 }
