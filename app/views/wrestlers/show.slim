@@ -1,18 +1,17 @@
-#container
-	#row
-		#box
-			#col-lg-12
+.container'
+	.row
+		.box
+			.col-lg-12
 				hr
-				#intro-text
-					#text-center
+				.intro-text
+					.text-center
 						h2
 							= @wrestler.name
 				hr
-					#img-responsive
-					#img-border
-					#img-left
-						= image_tag @wrestler.image.url
-				#visible-xs
+					.img-responsive
+						.img-border
+							.img-left
+								= image_tag @wrestler.image.url
 					hr
 						p
 							- if @wrestler.alignment == true
@@ -41,8 +40,8 @@
 								= @wrestler.user.name
 								.
 						p
-  						#btn
-							#btn-large
-							#btn-info
+  						.btn
+								.btn-large
+									.btn-info
 								= link_to 'Change Wrestler Profile', edit_wrestler_path(@wrestler)
 br
