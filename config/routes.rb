@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   resources :wrestlers
   resources :cards, :only => [:index]
+  resources :shows, :only => [:index, :create]
+  
 end
