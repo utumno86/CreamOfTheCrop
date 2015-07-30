@@ -28,12 +28,4 @@ class Card < ActiveRecord::Base
     card.save
     return card
   end
-
-  def self.clear(id)
-    cards = Card.where(:user_id => id)
-    cards.each do |card|
-      card.matches.each(&:delete)
-      card.delete
-    end
-  end
 end
