@@ -1,8 +1,9 @@
 Creamofthecrop
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+App Info
+--------
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
 provided by the [RailsApps Project](http://railsapps.github.io/).
 
@@ -30,7 +31,7 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 
 Initial Release
 ---------------
-I am pleased to announce that an alpha alpha (pre-alpha?) of my Iron Yard demo day app is currently live on Heroku [here](http://creamofthecrop.herokuapp.com/).
+I am pleased to announce that an alpha alpha (pre-alpha?) of my Iron Yard demo day app is currently live on Heroku [here](http://michaelenash.com/).
 
 
 A couple of notes about it:
@@ -55,3 +56,19 @@ A couple of notes about it:
 
 
 In general, I welcome your questions, comments or concerns.
+
+About the Author
+----------------
+Michael Nash is a Ruby on Rails developer.  He is a recent graduate of The Iron Yard St Peterburg’s Ruby on
+Rails program. He is also a former academic, with an MA in Chinese History from Columbia and years of travel
+and language experience around Asia.
+
+His current projects include (but are not limited to) developing a series of Rails engines as a supplement
+to rails composer, working through the problems on the Euler Project in Ruby, working through the Learnynode
+program to learn Node.js, and and learning the basics of Python.
+
+His portfolio is available at Github [here](http://utumno86.github.io/).
+
+He tweets at [@utumno86](https://twitter.com/utumno86).
+
+He blogs at [wordpress](http://utumno86.wordpress.com).
