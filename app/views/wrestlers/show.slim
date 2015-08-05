@@ -8,11 +8,7 @@
 						h2
 							= @wrestler.name
 				hr
-				.img-responsive
-					.img-border
-					.img-left
-						= image_tag @wrestler.image.url
-
+					= image_tag @wrestler.image.url, class: "img-responsive, img-border, img-left"
 					p
 						- if @wrestler.alignment == true
 							This wrestler is a Babyface (Tecnico).
@@ -31,7 +27,7 @@
 							This wrestler currently performs in the Undercard.
 					p
 						- if @wrestler.injured
-						This wrestler is injured and cannot currently compete.
+							wrestler is injured and cannot currently compete.
 					p
 						- unless @wrestler.user.promotion.blank?
 							This wrestler is currently performing in the
@@ -40,8 +36,5 @@
 							= @wrestler.user.name
 							.
 					p
-						.btn
-							.btn-large
-							.btn-info
-									= link_to 'Change Wrestler Profile', edit_wrestler_path(@wrestler)
+						= link_to 'Change Wrestler Profile', edit_wrestler_path(@wrestler), class: "btn btn-large btn-info"
 br
