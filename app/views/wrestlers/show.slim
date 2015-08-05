@@ -1,4 +1,4 @@
-.container'
+.container
 	.row
 		.box
 			.col-lg-12
@@ -10,38 +10,38 @@
 				hr
 					.img-responsive
 						.img-border
-							.img-left
-								= image_tag @wrestler.image.url
-					hr
-						p
-							- if @wrestler.alignment == true
-								This wrestler is a Babyface (Tecnico).
-							- else
-								This wrestler is a Heel (Rudo).
-						p
-							- if @wrestler.position == 5
-								This wrestler currently performs in the Main Event.
-							- elsif @wrestler.position == 4
-								This wrestler currently performs in the High Card.
-							- elsif @wrestler.position == 3
-								This wrestler currently performs in the Mid Card.
-							- elsif @wrestler.position == 2
-								This wrestler currently performs in the Low Card.
-							- else
-								This wrestler currently performs in the Undercard.
-						p
-							- if @wrestler.injured
-							This wrestler is injured and cannot currently compete.
-						p
-							- unless @wrestler.user.promotion.blank?
-								This wrestler is currently performing in the
-								= @wrestler.user.promotion
-  							promotion under owner
-								= @wrestler.user.name
-								.
-						p
-  						.btn
-								.btn-large
-									.btn-info
-								= link_to 'Change Wrestler Profile', edit_wrestler_path(@wrestler)
+						.img-left
+							= image_tag @wrestler.image.url
+
+					p
+						- if @wrestler.alignment == true
+							This wrestler is a Babyface (Tecnico).
+						- else
+							This wrestler is a Heel (Rudo).
+					p
+						- if @wrestler.position == 5
+							This wrestler currently performs in the Main Event.
+						- elsif @wrestler.position == 4
+							This wrestler currently performs in the High Card.
+						- elsif @wrestler.position == 3
+							This wrestler currently performs in the Mid Card.
+						- elsif @wrestler.position == 2
+							This wrestler currently performs in the Low Card.
+						- else
+							This wrestler currently performs in the Undercard.
+					p
+						- if @wrestler.injured
+						This wrestler is injured and cannot currently compete.
+					p
+						- unless @wrestler.user.promotion.blank?
+							This wrestler is currently performing in the
+							= @wrestler.user.promotion
+  						promotion under owner
+							= @wrestler.user.name
+							.
+					p
+						.btn
+							.btn-large
+							.btn-info
+									= link_to 'Change Wrestler Profile', edit_wrestler_path(@wrestler)
 br
