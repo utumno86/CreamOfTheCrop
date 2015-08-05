@@ -8,10 +8,10 @@
 						h2
 							= @wrestler.name
 				hr
-					.img-responsive
-						.img-border
-						.img-left
-							= image_tag @wrestler.image.url
+				.img-responsive
+					.img-border
+					.img-left
+						= image_tag @wrestler.image.url
 
 					p
 						- if @wrestler.alignment == true
