@@ -1,6 +1,7 @@
 Creamofthecrop
 ================
 
+This application was created as a final project for The Iron Yard St. Petersburd for the May 2015 Ruby on Rails Engineering cohort. I presented a demo of it at The Iron Yard Demo Day on July 24rth, 2015. Video of this presentation is available [here](https://www.youtube.com/watch?v=0heOms7DK6s&feature=youtu.be).
 
 App Info
 --------
