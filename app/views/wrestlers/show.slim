@@ -9,32 +9,29 @@
 							= @wrestler.name
 				hr
 					= image_tag @wrestler.image.url, class: "img-responsive, img-border, img-left"
-					p
-						- if @wrestler.alignment == true
-							This wrestler is a Babyface (Tecnico).
-						- else
-							This wrestler is a Heel (Rudo).
-					p
-						- if @wrestler.position == 5
-							This wrestler currently performs in the Main Event.
-						- elsif @wrestler.position == 4
-							This wrestler currently performs in the High Card.
-						- elsif @wrestler.position == 3
-							This wrestler currently performs in the Mid Card.
-						- elsif @wrestler.position == 2
-							This wrestler currently performs in the Low Card.
-						- else
-							This wrestler currently performs in the Undercard.
-					p
-						- if @wrestler.injured
-							wrestler is injured and cannot currently compete.
-					p
-						- unless @wrestler.user.promotion.blank?
-							This wrestler is currently performing in the
-							= @wrestler.user.promotion
-  						promotion under owner
-							= @wrestler.user.name
-							.
+
+					- if @wrestler.alignment == true
+						p	This wrestler is a Babyface (Tecnico).
+					- else
+						p	This wrestler is a Heel (Rudo).
+
+					- if @wrestler.position == 5
+						p This wrestler currently performs in the Main Event.
+					- elsif @wrestler.position == 4
+						p This wrestler currently performs in the High Card.
+					- elsif @wrestler.position == 3
+						p This wrestler currently performs in the Mid Card.
+					- elsif @wrestler.position == 2
+						p This wrestler currently performs in the Low Card.
+					- else
+						p This wrestler currently performs in the Undercard.
+
+					- if @wrestler.injured
+						p	This wrestler is injured and cannot currently compete.
+
+					- unless @wrestler.user.promotion.blank?
+						p This wrestler is currently performing in the #{@wrestler.user.promotion} promotion under owner #{@wrestler.user.name}.
+
 					p
 						= link_to 'Change Wrestler Profile', edit_wrestler_path(@wrestler), class: "btn btn-large btn-info"
 br
