@@ -15,7 +15,8 @@ class WrestlersController < ApplicationController
     @wrestler_categories << Wrestler.set_undercard_babyfaces(current_user.id, true)
     @wrestler_categories << Wrestler.set_undercard_heels(current_user.id, true)
 
-
+    @positions = ['The Main Event', 'The High Card', 'The Mid Card', 'The Low Card', 'Undercard']
+    @alignments = ['Babyfaces (Tecnicos)', 'Heels (Rudos)']
   end
 
   def show
