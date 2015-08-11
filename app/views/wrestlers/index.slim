@@ -1,17 +1,18 @@
-<div class="row">
-<div class="box">
-	<div class="col-lg-12">
-		<hr>
-		<h1 class="text-center">
-			<% unless current_user.promotion.blank?  %>
-				<%=current_user.promotion  %> -- Roster</h1>
-			<%else  %>
-					<h1>Roster</h1>
-			<%end  %>
-		<hr>
-	</div>
-</div>
-</div>
+- content_for :title do
+	| Roster
+.container
+	.row
+		.box
+			.col-lg-12
+				hr
+				.text-center
+					h1
+						- unless current_user.promotion.blank?
+							= current_user.promotion
+							|     Roster
+						- else
+							h1 Roster
+				hr
 <div class="row">
 	<div class="box">
 		<div class="col-lg-12">

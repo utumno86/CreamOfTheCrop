@@ -3,16 +3,19 @@ class WrestlersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @main_event_babyfaces = Wrestler.set_main_event_babyfaces(current_user.id, true)
-    @main_event_heels = Wrestler.set_main_event_heels(current_user.id, true)
-    @high_card_babyfaces = Wrestler.set_high_card_babyfaces(current_user.id, true)
-    @high_card_heels = Wrestler.set_high_card_heels(current_user.id, true)
-    @mid_card_babyfaces = Wrestler.set_mid_card_babyfaces(current_user.id, true)
-    @mid_card_heels = Wrestler.set_mid_card_heels(current_user.id, true)
-    @low_card_babyfaces = Wrestler.set_low_card_babyfaces(current_user.id, true)
-    @low_card_heels = Wrestler.set_low_card_heels(current_user.id, true)
-    @undercard_babyfaces = Wrestler.set_undercard_babyfaces(current_user.id, true)
-    @undercard_heels  = Wrestler.set_undercard_heels(current_user.id, true)
+    @wrestler_categories = []
+    @wrestler_categories << Wrestler.set_main_event_babyfaces(current_user.id, true)
+    @wrestler_categories << Wrestler.set_main_event_heels(current_user.id, true)
+    @wrestler_categories << Wrestler.set_high_card_babyfaces(current_user.id, true)
+    @wrestler_categories << Wrestler.set_high_card_heels(current_user.id, true)
+    @wrestler_categories << Wrestler.set_mid_card_babyfaces(current_user.id, true)
+    @wrestler_categories << Wrestler.set_mid_card_heels(current_user.id, true)
+    @wrestler_categories << Wrestler.set_low_card_babyfaces(current_user.id, true)
+    @wrestler_categories << Wrestler.set_low_card_heels(current_user.id, true)
+    @wrestler_categories << Wrestler.set_undercard_babyfaces(current_user.id, true)
+    @wrestler_categories << Wrestler.set_undercard_heels(current_user.id, true)
+
+
   end
 
   def show
