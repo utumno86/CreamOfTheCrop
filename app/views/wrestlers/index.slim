@@ -11,39 +11,43 @@
 					- else
 						| Roster
 			hr
-	- (0..4).each do |position|
-		.row.box
+		- (0..4).each do |position|
+			.row.box
 				.col-lg-12
 					hr
-					h2.text-center.strong
+					h2.intro-text.text-center
 						| Your Wrestlers in the #{@positions[position]}!
 						- (0..1).each do |alignment|
 							- index = (position*2 + alignment)
-							h3.intro-text.u
-								= @alignments[alignment]
-								- unless @wrestler_categories[index].blank?
-									- @wrestler_categories[index].each do |wrestler|
-										.col-sm-4.text-center
-											= image_tag wrestler.image.url, class: "img-responsive"
+							.row.box
+								.col-lg-12
+								hr
+									h3.intro-text.text-center
+										u = @alignments[alignment]
+										hr
+									- unless @wrestler_categories[index].blank?
+										- @wrestler_categories[index].each do |wrestler|
+											.col-sm-4.text-center
+												= image_tag wrestler.image.url, class: "img-responsive"
 
-											.btn-group.pull-right.wrestler-options-group
-												button.btn.btn-default.dropdown-toggle type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-													i.glyphicon.glyphicon-cog
+												.btn-group.pull-right.wrestler-options-group
+													button.btn.btn-default.dropdown-toggle type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+														i.glyphicon.glyphicon-cog
 														span.caret
-															ul.dropdown-menu
-																li = link_to 'Wrestler Profile', wrestler
-																li = link_to 'Change Details', edit_wrestler_path(wrestler)
-																li = link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }
-											h3.text-left = wrestler.name
-								-else
+													ul.dropdown-menu
+														li = link_to 'Wrestler Profile', wrestler
+														li = link_to 'Change Details', edit_wrestler_path(wrestler)
+														li = link_to 'You\'re Fired', wrestler, method: :delete, data: { confirm: 'Are you sure?' }
+												h3.text-left = wrestler.name
+									- else
 
-									h4.intro-text.text-center
-										| You have no babyface wrestlers able to compete in the Main Event! #{link_to 'Hire a new wrestler', new_wrestler_path}
-										br
-										| Turn a heel face! Turn a face heel! Promote somebody! Alternatively
-										br
+										h4.intro-text.text-center
+											| You have no babyface wrestlers able to compete in the Main Event! #{link_to 'Hire a new wrestler', new_wrestler_path}
+											br
+											| Turn a heel face! Turn a face heel! Promote somebody! Alternatively
+											br
 										h1.text-center SHOVE THAT CONTROL INTO A NOSE DIVE!!!
-				.row.box
-					.col-lg-12.text-center
-						hr
-		= link_to 'New Wrestler', new_wrestler_path, class: "btn btn-large text-center btn-success"
+		.row.box
+			.col-lg-12.text-center
+				hr
+				= link_to 'New Wrestler', new_wrestler_path, class: "btn btn-large text-center btn-success"
