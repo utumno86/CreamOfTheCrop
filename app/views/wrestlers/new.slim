@@ -1,0 +1,10 @@
+- content_for :title do
+	| New Wrestler
+.container
+	.row.box
+		.col-sm-offset-3.col-sm-6
+			h1 New Wrestler
+			= render 'form'
+
+			br
+			= link_to 'Back', wrestlers_path, class: "btn btn-large btn-danger"
