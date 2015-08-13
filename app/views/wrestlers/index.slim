@@ -15,8 +15,8 @@
 			.row.box
 				.col-lg-12
 					hr
-					h2.intro-text.text-center
-						| Your Wrestlers in the #{@positions[position]}!
+					.intro-text.text-center
+						h2 Your Wrestlers in the #{@positions[position]}!
 						- (0..1).each do |alignment|
 							- index = (position*2 + alignment)
 							.row.box
@@ -51,3 +51,5 @@
 			.col-lg-12.text-center
 				hr
 				= link_to 'New Wrestler', new_wrestler_path, class: "btn btn-large text-center btn-success"
+
+				hr
