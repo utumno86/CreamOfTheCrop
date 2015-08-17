@@ -27,7 +27,7 @@
 										hr
 									- unless @wrestler_categories[index].blank?
 										- @wrestler_categories[index].each do |wrestler|
-											.col-sm-4.text-center
+											.col-sm-4
 												= image_tag wrestler.image.url, class: "img-responsive"
 
 												.btn-group.pull-right.wrestler-options-group
