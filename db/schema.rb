@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 20150716132722) do
 
   create_table "cards", force: :cascade do |t|
     t.integer  "match_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "date"
     t.string   "frequency"
-    t.text     "names"
+    t.text     "names",      default: [],              array: true
     t.integer  "user_id"
   end
 
