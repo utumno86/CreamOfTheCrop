@@ -9,7 +9,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'omniauth-google-oauth2'
 gem 'rails_admin'
-gem 'mandrill-api'
 gem 'mini_magick'
 gem 'fog'
 gem 'carrierwave'
@@ -17,6 +16,7 @@ gem 'faker', :require => false
 gem 'tickle'
 gem 'slim'
 gem 'autoprefixer-rails'
+gem 'sendgrid'
 
 group :development, :test do
   gem 'byebug'
