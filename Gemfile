@@ -17,18 +17,21 @@ gem 'tickle'
 gem 'slim'
 gem 'autoprefixer-rails'
 gem 'sendgrid'
-
-group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
-
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'high_voltage'
 gem 'pg'
 gem 'puma'
+
+group :development, :test do
+  gem 'byebug'
+  gem 'spring'
+  gem 'factory_girl_rails'
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'rspec-rails'
+  gem 'rubocop'
+end
 
 group :development do
   gem 'better_errors'
@@ -37,14 +40,7 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
-end
-
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'pry-rails'
-  gem 'pry-rescue'
-  gem 'rspec-rails'
-  gem 'rubocop'
+  gem 'web-console', '~> 2.0'
 end
 
 group :production do
