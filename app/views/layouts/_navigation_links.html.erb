@@ -8,5 +8,5 @@
 <% else %>
   <li><%= link_to 'Sign in', new_user_session_path, class: 'nav_item' %></li>
   <li><%= link_to 'Sign up', new_user_registration_path, class: 'nav_item' %></li>
-		<li><%= link_to 'Sign in with Google', user_omniauth_authorize_path(:google_oauth2), class: 'nav_item'%></li>
+		<li><%= link_to 'Sign in with Google', user_google_oauth2_omniauth_authorize_path(:google_oauth2), class: 'nav_item'%></li>
 <% end %>
