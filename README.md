@@ -10,6 +10,8 @@ provided by the [RailsApps Project](http://railsapps.github.io/).
 
 Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
 
+This app was upgraded to the Heroku-18 stack on January 13th, 2020. Hopefully.
+
 Problems? Issues?
 -----------
 
