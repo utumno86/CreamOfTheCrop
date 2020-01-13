@@ -21,7 +21,7 @@ gem 'devise'
 gem 'high_voltage'
 gem 'pg', '~> 0.20'
 gem 'puma'
-gem 'loofah', '~> 2.2.1'
+gem 'loofah', '~> 2.3.1'
 
 group :development, :test do
   gem 'byebug'
