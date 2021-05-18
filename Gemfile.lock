@@ -308,6 +308,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     nested_form (0.3.2)
+    nio4r (2.5.2)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     oauth2 (1.4.0)
@@ -341,7 +342,8 @@ GEM
       interception (>= 0.5)
       pry
     public_suffix (3.0.1)
-    puma (3.11.2)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.8)
